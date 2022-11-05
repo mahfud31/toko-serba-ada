@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\CarouselController as AdminCarouselController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\ProductGalleryController as AdminProductGalleryController;
+use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
 use App\Http\Controllers\CheckoutController;
 
 /*
@@ -87,6 +88,7 @@ Route::prefix('admin')
     Route::resource('user', AdminUserController::class);
     Route::resource('product', AdminProductController::class);
     Route::resource('gallery-product', AdminProductGalleryController::class);
+    Route::resource('transaction', AdminTransactionController::class);
     Route::resource('carousel', AdminCarouselController::class);
   });
 

@@ -57,8 +57,9 @@
 							Galleries
 						</a>
 						<a
-							href="#"
-							class="list-group-item list-group-item-action"
+							href="{{ route('transaction.index') }}"
+							class="list-group-item list-group-item-action
+							{{ (request()->is('admin/transaction*')) ? 'active' : '' }}"
 						>
 							Transactions
 						</a>

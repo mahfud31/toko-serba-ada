@@ -124,12 +124,19 @@
 												alt=""
 												class="rounded-circle mr-2 profile-picture"
 											/>
-											Hi, Mahfud
+											Hi, {{ Auth::user()->name }}
 										</a>
 										<div class="dropdown-menu">
 											<a href="/" class="dropdown-item">Home</a>
                                             <div class="dropdown-divider"></div>
-											<a href="/" class="dropdown-item">Logout</a>
+											<a class="dropdown-item" href="{{ route('logout') }}"
+												onclick="event.preventDefault();
+													document.getElementById('logout-form').submit();">
+												{{ __('Logout') }}
+											</a>
+											<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+													@csrf
+											</form>
 										</div>
 									</li>
 								</ul>
@@ -137,10 +144,10 @@
 								<!-- mobile menu -->
 								<ul class="navbar-nav d-block d-lg-none">
 									<li class="nav-item">
-										<a href="#" class="nav-link"> Hi, Mahfud </a>
+										<a href="#" class="nav-link"> Hi, {{ Auth::user()->name }} </a>
 									</li>
 									<li class="nav-item">
-										<a href="#" class="nav-link d-inline-block"> Cart </a>
+										<a href="/" class="nav-link">Home</a>
 									</li>
 								</ul>
 							</div>

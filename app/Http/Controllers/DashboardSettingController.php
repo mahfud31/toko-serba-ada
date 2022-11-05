@@ -13,7 +13,7 @@ class DashboardSettingController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function store()
+    public function store(Request $request)
     {
         $user = Auth::user();
         $categories = Category::all();

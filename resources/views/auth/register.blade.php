@@ -275,8 +275,8 @@
 			},
 			data() {
 				return {
-					name: "mahfud el-co",
-					email: "mahfudelcho@gmail.com",
+					name: "admin toko",
+					email: "admin@gmail.com",
 					store_status: true,
 					store_name: "",
 					email_unavailable: false
